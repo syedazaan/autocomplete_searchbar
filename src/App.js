@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App(){
+  const fetchData = async ( ) => {
+    const data = await fetch("https://dummyjson.com/recipes/search?q="");
+    setResults
+  };
+
+useEffect( () => {
+  const time = setTimeout(fetchData, 300);
+
+  return ( ) => {
+    clearTimeout((timer));
+  }
+
+}, [input] );
+
+  return(
+    <div>
+      <h1>
+        Autocomplete Search Bar
+      </h1>
+      <div>
+        <input type = "text" className="search-input" />
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
